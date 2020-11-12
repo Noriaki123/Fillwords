@@ -54,6 +54,12 @@ namespace Fillwords
                 key = Console.ReadKey();
                 if (key.Key == ConsoleKey.UpArrow) point--;
                 if (key.Key == ConsoleKey.DownArrow) point++;
+                if (key.Key == ConsoleKey.Enter)
+                {
+                    Console.Clear();
+                    DefineButton();
+                    break;
+                }
                 if (point < 0) point = 3;
                 if (point > 3) point = 0;
             } while (key.Key != ConsoleKey.Escape);
@@ -64,5 +70,12 @@ namespace Fillwords
             return (100 - text.Length) / 2;
         }
 
+        public static void DefineButton()
+        {
+            if (point == 0) Console.WriteLine("Тут однажды будет Новая игра");
+            if (point == 1) Console.WriteLine("Тут однажды будет Продолжить");
+            if (point == 2) Console.WriteLine("Тут однажды будет Рейтинг");
+            if (point == 3) Console.WriteLine("Тут однажды будет Выход");
+        }
     }
 }
