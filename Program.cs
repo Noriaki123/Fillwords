@@ -6,7 +6,7 @@ namespace Fillwords
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Menu.DrawMenu();
         }
     }
 }
