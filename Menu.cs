@@ -72,7 +72,12 @@ namespace Fillwords
 
         public static void DefineButton()
         {
-            if (point == 0) Console.WriteLine("Тут однажды будет Новая игра");
+            if (point == 0)
+            {
+                Console.WriteLine("Тут однажды будет Новая игра");
+                Console.WriteLine("Введите Своё имя");
+                string name = Console.ReadLine();
+            }
             if (point == 1) Console.WriteLine("Тут однажды будет Продолжить");
             if (point == 2) Console.WriteLine("Тут однажды будет Рейтинг");
             if (point == 3) Console.WriteLine("Тут однажды будет Выход");
